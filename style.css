@@ -68,18 +68,15 @@ nav ul li a:hover::after {
 
 /* Hero */
 #hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 120px 20px 60px;
-    background: linear-gradient(135deg, #111, #1a1a1a);
-    position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 20px 40px;
+}
+.hero-left, .hero-right {
+  flex: 1 1 300px;
 }
 
-.hero-left {
-    flex: 1;
-    max-width: 550px;
-}
 
 .hero-left h2 {
     font-size: 42px;
@@ -218,4 +215,54 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+    @media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav h1 {
+    font-size: 22px;
+  }
+
+  .hero-left h2 {
+    font-size: 28px;
+  }
+
+  .hero-left p {
+    font-size: 16px;
+  }
+
+  .hero-right img {
+    width: 180px;
+  }
+
+  .skills-list {
+    gap: 15px;
+  }
+
+  .skill {
+    width: 90px;
+    height: 90px;
+    font-size: 12px;
+  }
+
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+}
+
 }
